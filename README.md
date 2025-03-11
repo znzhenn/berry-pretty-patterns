@@ -74,3 +74,5 @@ The goal for this project is to create a website for knitters/crocheters/crafter
 **Do I want to continue working on this project?**
 
 **What did I learn?**
+[berry pretty patterns erd - Google Docs.pdf](https://github.com/user-attachments/files/19175390/berry.pretty.patterns.erd.-.Google.Docs.pdf)
+![berry pretty patterns erd.pdf](https://github.com/user-attachments/files/19175389/berry.pretty.patterns.erd.pdf)
