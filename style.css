@@ -1,0 +1,134 @@
+body {
+    background-image: url('project goals/stock images/bg1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+    background-color: pink;
+    color: #4a4a4a;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+  }
+
+  
+  #header {
+    background-color: #fbd6d6;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #700067;
+  }
+  
+  img {
+    display: block;
+    margin: auto;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  
+  nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #700067;
+    font-weight: bold;
+  }
+  
+  .signup-button {
+    background-color: #f4b7c3;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+  }
+
+  
+  .hero {
+    background: url('project goals/stock images/bg1.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #6a006a;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .hero-image {
+    margin-top: 1rem;
+  }
+  
+  .welcome {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .welcome h2 {
+    color: #910091;
+  }
+  
+  .join-now {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #f4b7c3;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .patterns {
+    flex: 1;
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .patterns h2 {
+    text-align: center;
+    color: #5a7b4e;
+  }
+  
+  .pattern-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .pattern-card {
+    background-color: #e0e0d1;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .pattern-card p {
+    background-color: #f4b7c3;
+    padding: 0.3rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #700067;
+  }
+  
