@@ -27,6 +27,7 @@ body {
   }
   
   #logo {
+    background-color:#f4b7c3;
     display: flex;
     align-items: center;
     font-weight: bold;
