@@ -74,4 +74,4 @@ The goal for this project is to create a website for knitters/crocheters/crafter
 **Do I want to continue working on this project?**
 
 **Entity Relationship Diagram**
-[berry pretty patterns erd](https://github.com/znzhenn/berry-pretty-patterns/blob/main/entity%20relationship%20diagrams/Berry%20Pretty%20Patterns%20ERD.png)
+<img width="1440" alt="personal website image" src="https://github.com/znzhenn/berry-pretty-patterns/blob/main/entity%20relationship%20diagrams/Berry%20Pretty%20Patterns%20ERD.png">
