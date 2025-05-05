@@ -49,7 +49,11 @@ body {
   }
   
   .auth-box.cream {
-    background-color: #fdf5ee;
+    background-color: #f8e6d7;
+  }
+
+  .auth-box.standard  {
+    background-color: #dcb9dc;
   }
   
   .auth-box h2 {

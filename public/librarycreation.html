@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patterns | Berry Pretty Patterns</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+  <script defer src="scripts/createlibrary.js"></script>
+</head>
+<body class="pattern-library">
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <h1>Berry Pretty Patterns</h1>
+    </div>
+    <a href="signup.html" class="auth-link">SIGN UP</a>
+  </header>
+
+  <main>
+    <div id="signupMessage"></div>
+    <section class="auth-box standard">
+      <img src="images/logo.png" alt="Strawberries" class="berries">
+      <h2>Create your own Pattern Library!</h2>
+      <form id="signupform">
+        <label>Name:
+          <input type="text" required id="name">
+        </label>
+        <label>Email:
+          <input type="email" required id="email">
+        </label>
+        <label>Username:
+          <input type="text" required id="username">
+        </label>
+        <label>Password:
+          <input type="password" required id="password">
+        </label>
+        <button type="submit" class="btn">Create Account</button>
+      </form>
+    </section>
+  </main>
+
+  <button class="homebtn">Back to Home</button>
+</body>
+</html>
