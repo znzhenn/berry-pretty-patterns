@@ -1,50 +1,48 @@
 const con = require("../db_connect");
-const bcrypt = require("bcrypt");
 
+// Check if table exists
 async function createTable() {
-  let sql = `
-    CREATE TABLE IF NOT EXISTS Berry_User (
-      User_ID INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-      Email VARCHAR(500),
-      Username VARCHAR(50),
-      Password VARCHAR(100),
-      Biography TEXT,
-      Craft_Preference SET('Knitting','Crochet','General Crafts'),
-      Pattern_Library_ID INT
-    );
-  `;
+  let sql = `CREATE TABLE IF NOT EXISTS Berry_User (
+    User_ID INT NOT NULL AUTO_INCREMENT,
+    Email VARCHAR(500) NOT NULL UNIQUE,
+    Username VARCHAR(50) NOT NULL UNIQUE,
+    Password VARCHAR(100) NOT NULL,
+    FirstName VARCHAR(100),
+    CONSTRAINT userPK PRIMARY KEY(User_ID)
+  );`;
   await con.query(sql);
 }
 createTable();
 
+// Check if user exists
 async function userExists(username) {
-  let sql = `SELECT * FROM Berry_User WHERE Username = ?`;
-  const result = await con.query(sql, [username]);
-  return result;
+  const sql = `SELECT * FROM Berry_User WHERE Username = ?`;
+  const results = await con.query(sql, [username]);
+  return results;
 }
 
+// Register user
 async function register(user) {
-  const check = await userExists(user.username);
-  if (check.length) throw Error("Username already exists");
+  const existing = await userExists(user.Username);
+  if (existing.length > 0) throw Error("Username already in use!");
 
-  const hashed = await bcrypt.hash(user.password, 10);
-  let sql = `
-    INSERT INTO Berry_User (Email, Username, Password)
-    VALUES (?, ?, ?)
-  `;
-  await con.query(sql, [user.email, user.username, hashed]);
+  const sql = `
+    INSERT INTO Berry_User (FirstName, Email, Username, Password)
+    VALUES (?, ?, ?, ?)`;
+  await con.query(sql, [user.FirstName, user.Email, user.Username, user.Password]);
 
-  return await login(user);
+  return await login(user); // Log them in after registering
 }
 
+// Login user
 async function login(user) {
-  const result = await userExists(user.username);
-  if (!result[0]) throw Error("User not found");
-
-  const valid = await bcrypt.compare(user.password, result[0].Password);
-  if (!valid) throw Error("Incorrect password");
-
-  return result[0];
+  const results = await userExists(user.Username);
+  if (!results[0]) throw Error("Username not found");
+  if (results[0].Password !== user.Password) throw Error("Incorrect password");
+  return results[0];
 }
 
-module.exports = { register, login, userExists };
+module.exports = {
+  register,
+  login,
+};
