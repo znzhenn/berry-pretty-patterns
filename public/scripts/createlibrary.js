@@ -4,15 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
     if (signupForm) {
       signupForm.addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault(); 
   
-        // Get the input fields
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
   
-        // Create the user object
         const user = {
           name: name,
           email: email,
@@ -20,10 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
           password: password
         };
   
-        // Log the user object to the console
         console.log("User Object:", user);
   
-        // Display a message in the signupMessage div
         if (signupMessage) {
           signupMessage.innerHTML = `
             <h3>Account Created!</h3>
@@ -33,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
           `;
         }
   
-        // Optional: Clear the form fields after submission
         signupForm.reset();
       });
     }

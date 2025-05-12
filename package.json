@@ -1,0 +1,31 @@
+{
+  "name": "berry-pretty-patterns",
+  "version": "1.0.0",
+  "description": "a place for crafters to store their patterns",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znzhenn/berry-pretty-patterns.git"
+  },
+  "keywords": [
+    "pattern"
+  ],
+  "author": "Jennifer Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/znzhenn/berry-pretty-patterns/issues"
+  },
+  "homepage": "https://github.com/znzhenn/berry-pretty-patterns#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
